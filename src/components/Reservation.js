@@ -1,17 +1,12 @@
-import React, { Component } from 'react';
-import { observer, inject } from 'mobx-react'
+import React from "react"
+import { observer, inject } from "mobx-react"
 
-class Reservation extends Component {
-    render() {
-        return (
-            <div></div>
-            //render the reservation data here
-            //make sure you store the ID somewhere so you can find the reservation
-            //use the class "conditional" to conditionally render completed reservations
-            //You should hav ea complete reservation button to complete the reservation
-        )
-    }
+const Reservation = (props) => {
+  // render the reservation data here
+  // make sure you store the ID somewhere so you can find the reservation
+  // use the class "conditional" to conditionally render completed reservations
+  // You should have a complete reservation button to complete the reservation
+  return <div></div>
 }
 
-//inject your store here
-export default Reservation
+export default inject("GeneralStore", "RestaurantStore")(observer(Reservation))
