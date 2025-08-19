@@ -45,7 +45,7 @@ export class RestaurantStore {
     //find the reservation and change its seated value to true
     const found = this.reservations.find((r) => r.id === id)
     if (found) {
-      found.markCompleted()
+      found.markSeated()
     }
   }
   completeRes = (id) => {

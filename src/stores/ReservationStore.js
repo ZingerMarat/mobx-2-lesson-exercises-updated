@@ -24,10 +24,10 @@ export class Reservation {
   }
 
   markCompleted = () => {
-    this.completed = true
+    this.completed = !this.completed
   }
 
   markSeated = () => {
-    this.seated = true
+    this.seated = !this.seated
   }
 }
